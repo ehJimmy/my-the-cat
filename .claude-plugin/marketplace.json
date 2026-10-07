@@ -1,13 +1,17 @@
 {
   "name": "my-the-cat",
-  "description": "My-the-cat: a pixel tuxedo cat companion for Claude Code.",
-  "owner": { "name": "ehJimmy" },
+  "description": "My-the-cat: a pixel tuxedo cat companion for the Claude desktop app.",
+  "owner": {
+    "name": "ehJimmy"
+  },
   "plugins": [
     {
       "name": "my-the-cat",
       "source": "./my-the-cat",
-      "description": "A pixel tuxedo cat that lives above your Claude Code prompt.",
-      "author": { "name": "ehJimmy" }
+      "description": "A pixel tuxedo cat that lives above your prompt in the Claude desktop app.",
+      "author": {
+        "name": "ehJimmy"
+      }
     }
   ]
 }
