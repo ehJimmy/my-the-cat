@@ -1,4 +1,4 @@
-# My-the-cat 🐈‍⬛
+# Claude Mod: my-the-cat 🐈‍⬛
 
 By ehJimmy. Unofficial community mod, not made by Anthropic.
 
@@ -11,6 +11,16 @@ A pixel-art tuxedo cat with a red "MY" collar that lives just above your prompt 
 - **On the right**, it shows your usage: **Cat-text** (context window), **Play-session** (5-hour limit) and **Weekly**.
 
 ![My-the-cat in the Claude desktop app: walking while Claude works, scratching its block, a victory stretch, floating while you type, and napping](docs/desktop-preview.png)
+
+## The usage panel
+
+On the right of the cat's strip, a small panel keeps an eye on how much room you have left:
+
+- **Cat-text** is Claude's context window: how much of the conversation Claude can hold in mind at once. It shows the tokens used so far out of the total, for example `213.9k / 1M (21%)`. It grows as the chat gets longer, with every message, file and tool result. When it nears full, Claude Code compacts the chat by summarizing older parts, so starting a fresh chat for a new task keeps Claude sharp.
+- **Play-session** is your 5-hour usage limit, with when it resets.
+- **Weekly** is your weekly usage limit, with when it resets.
+
+Each row has a little bar that turns orange at 75% and red at 90%, so you can tell at a glance when to wrap up or start a new chat. The numbers update after each of Claude's replies.
 
 ## Install
 
