@@ -2,7 +2,7 @@
 
 By ehJimmy.
 
-A pixel-art tuxedo cat with a red "MY" collar that lives just above your Claude Code prompt.
+A pixel-art tuxedo cat with a red "MY" collar that lives just above your prompt in the **Claude desktop app** (Code tab).
 
 - **While Claude works**, it walks back and forth and now and then does something fun at a random spot: scratches its scratching block, does zoomies after its ball, or tilts its head and meows at its toy mouse.
 - **When a task is done**, it does a victory stretch beside its star trophy, walks back to its corner and sits.
@@ -12,50 +12,27 @@ A pixel-art tuxedo cat with a red "MY" collar that lives just above your Claude 
 
 ## Install
 
-You need a recent Claude Code: version 2.1.289 or newer. Mods like this one are an early-access feature.
+My-the-cat is made for the Claude desktop app. Mods like this one are an early-access feature, so keep the app up to date.
 
-### From GitHub (gets updates)
+1. **Get access.** This repository is private: ask ehJimmy to invite you, then accept the invite from your email or github.com/notifications.
+2. **Ask Claude to install it.** In the Claude desktop app, open the **Code** tab, start a new chat and send:
 
-This repository is private, so first ask ehJimmy to invite you, and accept the invite from your email or github.com/notifications. Your computer also needs to be signed in to GitHub for git (running `gh auth login` once does that).
+   > Please install the Claude Code plugin my-the-cat: add the plugin marketplace ehJimmy/my-the-cat, then install my-the-cat@my-the-cat. If my computer isn't signed in to GitHub yet, help me sign in first.
 
-Then in a terminal:
+3. **Start a new chat** in the Code tab and send a message. The cat appears above the prompt. Chats that were already open need the app restarted (quit and reopen it).
 
-```bash
-claude plugin marketplace add ehJimmy/my-the-cat
-```
+## Updates
 
-```bash
-claude plugin install my-the-cat@my-the-cat
-```
+When there's a new version, ask Claude in a Code chat:
 
-To get a newer version later: `claude plugin update my-the-cat@my-the-cat`.
-
-### From the zip
-
-1. **Unzip** the folder somewhere it can stay, for example `~/claude-mods/my-the-cat-marketplace`. Claude Code reads the cat from this folder, so don't delete or move it after installing.
-2. **Add and install it:**
-
-   ```bash
-   claude plugin marketplace add ~/claude-mods/my-the-cat-marketplace
-   ```
-
-   ```bash
-   claude plugin install my-the-cat@my-the-cat
-   ```
-
-### Then
-
-**Start a new session.** In the desktop app, open a new Code chat and send a message; chats already open need a restart (quit and reopen the app). In the terminal, start `claude` again.
-
-Only use the Claude desktop app? Start a Code chat and ask Claude to run the install commands for you.
-
-## Good to know
-
-- The cat looks best in the **Claude desktop app** (Code tab). In a terminal it shows as pixel art only in terminals that can draw images (Ghostty, kitty); elsewhere you'll see a small text cat and a one-line usage summary.
-- The usage limits show only on a Claude subscription. With an API key you'll see just Cat-text.
+> Please update the Claude Code plugin my-the-cat@my-the-cat.
 
 ## Uninstall
 
-```bash
-claude plugin uninstall my-the-cat@my-the-cat
-```
+Ask Claude in a Code chat:
+
+> Please uninstall the Claude Code plugin my-the-cat@my-the-cat.
+
+## Good to know
+
+- The usage limits show only on a Claude subscription. With an API key you'll see just Cat-text.
