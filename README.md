@@ -1,6 +1,6 @@
 # My-the-cat 🐈‍⬛
 
-By ehJimmy.
+By ehJimmy. Unofficial community mod, not made by Anthropic.
 
 A pixel-art tuxedo cat with a red "MY" collar that lives just above your prompt in the **Claude desktop app** (Code tab).
 
@@ -39,4 +39,9 @@ Ask Claude in a Code chat:
 
 ## Good to know
 
+- **Private by design:** the cat runs only on your own computer and sends nothing anywhere. The usage panel reads your usage inside your own Claude app and only shows it to you.
 - The usage limits show only on a Claude subscription. With an API key you'll see just Cat-text.
+
+## License
+
+MIT, see [LICENSE](LICENSE). You're welcome to use, change and share the cat; just keep the credit to ehJimmy.

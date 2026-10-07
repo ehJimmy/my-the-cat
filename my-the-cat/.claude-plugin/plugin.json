@@ -4,5 +4,6 @@
   "description": "My-the-cat, a pixel tuxedo cat above the prompt: walks and plays while Claude works, floats while you type, celebrates when a task is done, naps when idle. Also shows your context and usage limits.",
   "author": {
     "name": "ehJimmy"
-  }
+  },
+  "license": "MIT"
 }
