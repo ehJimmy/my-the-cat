@@ -18,12 +18,11 @@ My-the-cat is made for the Claude desktop app. Mods like this one are an early-a
 
 It was also built to run in the terminal (CLI), but that version is completely untested, so try it at your own risk. If the cat doesn't show up, it's probably just napping somewhere you can't see. Cats do that.
 
-1. **Get access.** This repository is private: ask ehJimmy to invite you, then accept the invite from your email or github.com/notifications.
-2. **Ask Claude to install it.** In the Claude desktop app, open the **Code** tab, start a new chat and send:
+1. **Ask Claude to install it.** In the Claude desktop app, open the **Code** tab, start a new chat and send:
 
-   > Please install the Claude Code plugin my-the-cat: add the plugin marketplace ehJimmy/my-the-cat, then install my-the-cat@my-the-cat. If my computer isn't signed in to GitHub yet, help me sign in first.
+   > Please install the Claude Code plugin my-the-cat: add the plugin marketplace ehJimmy/my-the-cat, then install my-the-cat@my-the-cat.
 
-3. **Start a new chat** in the Code tab and send a message. The cat appears above the prompt. Chats that were already open need the app restarted (quit and reopen it).
+2. **Start a new chat** in the Code tab and send a message. The cat appears above the prompt. Chats that were already open need the app restarted (quit and reopen it).
 
 ## Updates
 
