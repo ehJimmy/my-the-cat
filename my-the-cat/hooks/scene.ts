@@ -335,6 +335,40 @@ export const VICTORY_MS = VICTORY.seq.length * VICTORY.step * 1000
 export const homeMs = (width: number, x: number, victory: boolean) =>
   (victory ? VICTORY_MS : 0) + (Math.max(0, x - HOME) / pace(width).speed) * 1000
 
+// Confetti for the victory stretch: little pixel squares in the cat's colours
+// (collar red, tag gold, plus a few cheerful extras) drifting down from the top
+// of the band, tumbling as they go, fading out at the bottom. Seeded by where
+// the cat stands, so a redraw of the same moment draws the same confetti.
+const CONFETTI = ['#d23c3c', '#f2c14e', '#3b6fd4', '#5bb974', '#f08ca0', '#e8892b']
+
+function confetti(width: number, catX: number, seed: number, pieces = 56): string {
+  let n = seed >>> 0 || 1
+  const rand = () => {
+    n = (n * 1664525 + 1013904223) >>> 0
+    return n / 2 ** 32
+  }
+  const H = PX + BOB
+  let out = ''
+  for (let i = 0; i < pieces; i++) {
+    // Half the burst around the cat, the rest anywhere in the band.
+    const x0 = i % 2 ? rand() * width : Math.min(width - 4, Math.max(0, catX + (rand() - 0.5) * 240))
+    const drift = (rand() - 0.5) * 40
+    const size = rand() < 0.3 ? 5 : rand() < 0.5 ? 4 : 3
+    const begin = f2(rand() * 0.9)
+    const dur = f2(1.3 + rand() * 0.9)
+    const color = CONFETTI[Math.floor(rand() * CONFETTI.length)]!
+    const at = `begin="${begin}s" dur="${dur}s" fill="freeze"`
+    out +=
+      `<g opacity="0" transform="translate(${f2(x0)} -4)">` +
+      `<animate attributeName="opacity" values="1;1;0" keyTimes="0;0.75;1" ${at}/>` +
+      `<animateTransform attributeName="transform" type="translate" values="${f2(x0)} -4;${f2(x0 + drift)} ${H}" ${at}/>` +
+      // Tumbling: the piece flips edge-on and back as it falls.
+      `<rect width="${size}" height="${size}" fill="${color}">` +
+      `<animateTransform attributeName="transform" type="scale" values="1 1;0.2 1;1 1" dur="${f2(0.4 + rand() * 0.4)}s" begin="${begin}s" repeatCount="indefinite"/></rect></g>`
+  }
+  return `<g id="confetti">${out}</g>`
+}
+
 export function homeSvg(width: number, x: number, victory: boolean): string {
   const v = victory ? VICTORY_MS / 1000 : 0
   const arrive = v + Math.max(0, x - HOME) / pace(width).speed
@@ -350,6 +384,8 @@ export function homeSvg(width: number, x: number, victory: boolean): string {
   )
   // Keep under the Svg size limit: the blinking sit if it fits, else a still one.
   const sat = (stillSit: boolean) => during(arrive, undefined, `<g transform="translate(${HOME} ${BOB})">${sitter(stillSit)}</g>`)
-  const body = cheer.length + walkHome.length + sat(false).length < 125_000 ? sat(false) : sat(true)
-  return `${open(width)}${cheer}${walkHome}${body}</svg>`
+  // Confetti falls over the celebration, on top of everything else.
+  const party = victory ? confetti(width, x, Math.round(x * 97)) : ''
+  const body = cheer.length + walkHome.length + party.length + sat(false).length < 125_000 ? sat(false) : sat(true)
+  return `${open(width)}${cheer}${walkHome}${body}${party}</svg>`
 }
