@@ -16,6 +16,10 @@ My-the-cat is made for the Claude desktop app. Mods like this one are an early-a
 
 It was also built to run in the terminal (CLI), but that version is completely untested, so try it at your own risk. If the cat doesn't show up, it's probably just napping somewhere you can't see. Cats do that.
 
+Here's a mock-up of how it should look in a terminal that can draw images (Ghostty, kitty). Most other terminals get a tiny text cat instead: `(=^-^=) zZ`.
+
+![Mock-up of My-the-cat in a terminal: walking while Claude works, floating while you type, sleeping when idle](docs/terminal-preview.png)
+
 1. **Get access.** This repository is private: ask ehJimmy to invite you, then accept the invite from your email or github.com/notifications.
 2. **Ask Claude to install it.** In the Claude desktop app, open the **Code** tab, start a new chat and send:
 
