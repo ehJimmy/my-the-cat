@@ -14,6 +14,8 @@ A pixel-art tuxedo cat with a red "MY" collar that lives just above your prompt 
 
 My-the-cat is made for the Claude desktop app. Mods like this one are an early-access feature, so keep the app up to date.
 
+It was also built to run in the terminal (CLI), but that version is completely untested, so try it at your own risk. If the cat doesn't show up, it's probably just napping somewhere you can't see. Cats do that.
+
 1. **Get access.** This repository is private: ask ehJimmy to invite you, then accept the invite from your email or github.com/notifications.
 2. **Ask Claude to install it.** In the Claude desktop app, open the **Code** tab, start a new chat and send:
 
