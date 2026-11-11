@@ -1,0 +1,6 @@
+{
+  "name": "too-ticki",
+  "version": "0.1.0",
+  "description": "Too-ticki, en strihåret dachs i piksler over prompten: går og leker mens Claude jobber, reagerer på verktøyene Claude bruker, og får en valp for hver agent som kjører. Viser også kontekst og forbruksgrenser. Bygget på my-the-cat av ehJimmy.",
+  "license": "MIT"
+}

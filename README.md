@@ -12,6 +12,10 @@ A pixel-art tuxedo cat with a red "MY" collar that lives just above your prompt 
 
 ![My-the-cat in the Claude desktop app: walking while Claude works, scratching its block, a victory stretch, floating while you type, and napping](docs/desktop-preview.png)
 
+## Too-ticki the dachshund 🐕
+
+This repo also holds [too-ticki](too-ticki/), a wire-haired dachshund built on the cat. She digs when Claude searches, sniffs when Claude reads, barks when a tool call fails, and gets a puppy for every agent that is running. Install it as `too-ticki@my-the-cat`.
+
 ## The usage panel
 
 On the right of the cat's strip, a small panel keeps an eye on how much room you have left:

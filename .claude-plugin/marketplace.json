@@ -12,6 +12,11 @@
       "author": {
         "name": "ehJimmy"
       }
+    },
+    {
+      "name": "too-ticki",
+      "source": "./too-ticki",
+      "description": "Too-ticki, a pixel wire-haired dachshund above your prompt: reacts to the tools Claude uses, and gets a puppy for every running agent. Built on my-the-cat."
     }
   ]
 }
